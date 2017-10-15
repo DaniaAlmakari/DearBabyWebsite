@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Admin_MasterPage" %>
+
+<%@ Register src="Menu.ascx" tagname="Menu" tagprefix="uc1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style5 {
+            height: 35px;
+        }
+        .auto-style6 {
+            width: 1086px;
+            text-align: right;
+            font-size: large;
+        }
+        .auto-style7 {
+            width: 1086px;
+            text-align: right;
+            font-size: large;
+            height: 32px;
+            font-weight: 700;
+        }
+        .auto-style19 {
+            width: 1077px;
+            text-align: right;
+            font-size: large;
+            height: 40px;
+            font-weight: 700;
+        }
+        .auto-style20 {
+            width: 1077px;
+            text-align: right;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style19" dir="rtl" ></td>
+                <td class="auto-style5" ></td>
+            </tr>
+            <tr>
+                <td class="auto-style20" dir="rtl" style="vertical-align:top">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+                <td style="vertical-align:top">
+                    <uc1:Menu ID="Menu1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style20" dir="rtl">&nbsp;</td>
+                <td >&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

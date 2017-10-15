@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_home.master.cs" Inherits="MasterPage_home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   
+   <%-- *****************************************************************--%>
+    <title>موقع طفلي العزيز</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Happy Family Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery.min.js"></script>
+<!--start-smooth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+        });
+    });
+		</script>
+<!--start-smooth-scrolling-->
+   <%--*****************************************************************--%>
+    <style type="text/css">
+        .auto-style2 {
+            width: 22px;
+        }
+    </style>
+</head>
+<body>
+    
+    <%--*****************************************************************--%>
+    <!--banner-starts-->
+	<div class="banner" id="home">
+		<!--menu-->
+		<div class="header-info-right">
+				<div class="header cbp-spmenu-push">
+					<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+							<a href="index.aspx">الرئيسية</a>
+							<a href="login.aspx">تسجيل الدخول</a>
+                            <a href="Registration.aspx">تسجيل جديد</a>    
+                            <a href="../Members/Default_Members.aspx">استشيري الخبير</a>
+							<a href="who.aspx">من نحن</a>			
+							<a href="Search.aspx">البحث</a>
+					</nav>
+					<!--script-nav -->	
+					<script>
+					    $("span.menu").click(function () {
+					        $("ul.navigatoin").slideToggle("300", function () {
+					        });
+					    });
+					</script>
+					<script type="text/javascript">
+					    jQuery(document).ready(function ($) {
+					        $(".scroll").click(function (event) {
+					            event.preventDefault();
+					            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+					        });
+					    });
+					</script>
+					<div class="clearfix"> </div>
+						<!-- /script-nav -->
+									<div class="main">
+										<section class="buttonset">
+											<button id="showLeftPush"><img src="images/menu.png" /></button>
+										</section>
+									</div>
+									<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+									<script src="js/classie.js"></script>
+									<script>
+									    var menuLeft = document.getElementById('cbp-spmenu-s1'),
+											showLeftPush = document.getElementById('showLeftPush'),
+											body = document.body;
+
+									    showLeftPush.onclick = function () {
+									        classie.toggle(this, 'active');
+									        classie.toggle(body, 'cbp-spmenu-push-toright');
+									        classie.toggle(menuLeft, 'cbp-spmenu-open');
+									        disableOther('showLeftPush');
+									    };
+									</script>
+				</div>
+			</div>	
+<!--//menu-->
+	<div class="hire">
+		<a href="ContactUs.aspx">تواصـلي مـعـنـا</a>
+	</div>
+	<div class="container">
+		<div class="logo">
+			<a href="index.aspx"><img src="images/logo-5.png" alt="" /></a>
+		</div>
+		<div class="banner-bottom">
+			<h1 style="font-family: andalus; font-size: 70px; font-weight: bolder;" dir="rtl">"موقع طفلي العزيز"</h1>
+			<p style="font-family: andalus; font-size: 50px; font-weight: bolder;" dir="rtl"> تعلم.. تطور.. وبناء.. </p>
+			<a href="#welcome" class="scroll"><img src="images/arrow.png" alt="" /></a>
+		</div>
+	</div>
+	</div>
+
+	<!--banner-ends-->
+	<!--welcome-ends-->
+    <!--القسم الأول-->
+    <form id="form1" runat="server"> 
+    <div class="welcome" id="welcome">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+	</div>
+<!--footer-starts-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-top">
+				<a href="index.aspx"><img src="images/logo-5.png" alt="" /></a>
+			</div>
+			<div class="footer-bottom">
+				<div class="col-md-4 footer-left heading">
+					<h3 >Information:</h3>
+					<ul>
+						<li><a href="who.aspx">من نحن </a></li>
+						<li><a href="ContactUs.aspx">تواصلي معنا</a></li>
+						<li><a href="Registration.aspx">تسجيل جديد </a></li>
+						<li><a href="Search.aspx">البحث في موقع طفلي العزيز</a></li>
+					</ul>
+				</div>
+                <div class="col-md-4 footer-left heading">
+					<h3 > WebSite Section: </h3>
+                    <p > &nbsp;</p>
+					<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="3" HorizontalAlign="Left">
+                        <ItemTemplate>
+                            <table style="text-align: left" >
+                                <tr>
+                                    <td >
+                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/arw.png" />
+                                    </td>
+                                    <td style="text-align: left">
+                                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Gray" NavigateUrl='<%# Eval("Sec_Id", "ViewArticlesBySection.aspx?Id={0}") %>' Text='<%# Eval("Sec_name") %>'></asp:HyperLink>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ItemTemplate>
+                    </asp:DataList>
+					<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString_DearBaby %>" SelectCommand="SELECT [Sec_name], [Sec_Id] FROM [Section]"></asp:SqlDataSource>
+				</div>
+
+				<div class="col-md-4 footer-left heading">
+					<h3 >Friendly WebSites: </h3>
+					<ul>
+						<li><a href="http://www.arabia.babycenter.com/">بيبي سنتر آرابيا</a></li>
+						<li><a href="http://www.supermama.me/ar">سوبر ماما</a></li>
+						<%--<li><a href="#">Sed venenatis sollicitudin lorem nec</a></li>
+						<li><a href="#">Duis luctus, ante nec malesuada mollis</a></li>
+						<li><a href="#">Ut fringilla eros libero euismod</a></li>--%>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+    </form>
+	<!--footer-ends-->
+	<!--copy-starts-->
+	<div class="copy">
+		<div class="container">
+			<div class="copy-top">
+				<p class="footer-class">© 2016 My Dear Baby Website | Edit by Dania & Christen </p>
+			</div>
+		</div>
+		<script type="text/javascript">
+		    $(document).ready(function () {
+		        /*
+                var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                };
+                */
+
+		        $().UItoTop({ easingType: 'easeOutQuart' });
+
+		    });
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+	<!--copy-ends-->
+    <%--*****************************************************************--%>
+
+</body>
+</html>
+
